@@ -7,8 +7,8 @@ def parse_arguments():
     ''' Construct argument parser and available arguments, return dict '''
 
     parser = argparse.ArgumentParser(description='Return a password based on a word list. \
-                                     No arguments passed defaults to 4 word total with \
-                                     capitalization allowed.')
+                                     No arguments passed defaults to 4 word string without \
+                                     capitalization, special characters, or digits.')
 
     parser.add_argument('n', type=int, nargs='?', help='number of words to generate', default=4)
     parser.add_argument('-C', action="store_const", const=True, help='allow capitalized words')
