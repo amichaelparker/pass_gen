@@ -1,12 +1,7 @@
 import random
+import wordcheck as wc
 
-def caps_test(word):
-    if word[0] == word[0].upper():
-        return True
-
-    return False
-
-def pass_gen(length, caps):
+def pass_gen(length, caps, maximum, minimum):
     password = ''
 
     for _ in range(length):
@@ -14,9 +9,11 @@ def pass_gen(length, caps):
 
         if caps:
             new_word = random.choice(open('words.txt').readlines()).rstrip()
+            while not wc.word_length(new_word, maximum, minimum):
+                new_word = random.choice(open('words.txt').readlines()).rstrip()
         else:
             new_word = random.choice(open('words.txt').readlines()).rstrip()
-            while caps_test(new_word):
+            while wc.caps_test(new_word) or not wc.word_length(new_word, maximum, minimum):
                 new_word = random.choice(open('words.txt').readlines()).rstrip()
 
         password += new_word
