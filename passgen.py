@@ -1,5 +1,5 @@
-import parse
-import gen
+from lib import parse
+from lib import gen
 
 def main():
     arguments = parse.parse_arguments()
