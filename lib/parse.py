@@ -23,6 +23,5 @@ def parse_arguments():
 
     argument = parser.parse_args(sys.argv[1:])
     test = vars(argument)
-    print(test)
 
     return test
