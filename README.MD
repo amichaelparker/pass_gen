@@ -1,4 +1,4 @@
-# README
+# Passgen
 
 Python password generator based on https://xkcd.com/936/.
 
