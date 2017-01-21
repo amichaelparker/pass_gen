@@ -4,7 +4,7 @@ Python password generator based on https://xkcd.com/936/.
 
 Allows for generating with capitals, digits and special characters to satisfy common password requirements.
 
-usage: passgen.py [-h] [-C] [-s] [-i] [--max_length=] [--min_length=] [n]
+`usage: passgen.py [-h] [-C] [-s] [-i] [--max_length=] [--min_length=] [n]`
 
 |   Argument  |            Explanation             |
 |-------------|------------------------------------|    
