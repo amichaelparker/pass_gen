@@ -11,6 +11,9 @@ def caps_test(word):
 def word_length(word, maximum, minimum):
     ''' Check that word length falls into requested bounds '''
 
+    if minimum > maximum:
+        minimum = maximum
+
     if minimum <= len(word) <= maximum:
         return True
 

@@ -1,7 +1,6 @@
 ''' Generate passwords based on https://xkcd.com/936/ '''
 
-from lib import parse
-from lib import gen
+from lib import parse, gen
 
 def main():
     ''' Main function '''
